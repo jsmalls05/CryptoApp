@@ -18,7 +18,7 @@ export const App = () => {
                             <Route exact path='/'>
                                 <Homepage />
                             </Route>
-                            <Route exact path='/exchanges'>   
+                            <Route exact path='/exchanges'>
                                 <Exchanges />
                             </Route>
                             <Route exact path='/cryptocurrencies'>
@@ -27,15 +27,23 @@ export const App = () => {
                             <Route exact path='/crypto/:coinId'>
                                 <CryptoDetails />
                             </Route>
-                            <Route exact path='news'>
+                            <Route exact path='/news'>
                                 <News />
                             </Route>
                         </Switch>
                     </div>
                 </Layout>
-            </div>
             <div className='footer'>
-
+                <Typography.Title level={5} style={{ color: 'white', textAlign: 'center'}}>
+                    Cryptoverse <br />
+                    All rights reserved
+                </Typography.Title>
+                <Space>
+                    <Link to='/'>Home</Link>
+                    <Link to='/exchanges'>Exchanges</Link>
+                    <Link to='/news'>News</Link>
+                </Space>
+                    </div>
             </div>
         </div>
     )
